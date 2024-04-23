@@ -19,7 +19,7 @@ public class AddReviewDto {
     @Max(5)
     private Integer rating;
 
-    @NotNull
+    @NotNull(message = "Restaurant id cannot be null")
     private Long restaurantId;
 
 

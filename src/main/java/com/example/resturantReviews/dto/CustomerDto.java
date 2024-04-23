@@ -16,15 +16,15 @@ import org.hibernate.validator.constraints.Length;
 @NoArgsConstructor
 public class CustomerDto {
 
-    @NotNull
-    @NotEmpty
+    @NotNull(message = "name cannot be null")
+    @NotEmpty(message = "name cannot be empty")
     private String name;
 
-    @NotNull
-    @NotEmpty
+    @NotNull(message = "email cannot be null")
+    @NotEmpty(message = "email cannot be empty")
     private String email;
 
-    @NotNull
+    @NotNull(message = "password cannot be null")
     @Size(min=8,max=32,
             message = "password size should be between" +
                     " 8 and 32 digit or character")

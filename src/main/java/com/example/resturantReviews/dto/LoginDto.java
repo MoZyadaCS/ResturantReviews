@@ -15,11 +15,13 @@ import lombok.Setter;
 @NoArgsConstructor
 public class LoginDto {
 
-    @NotNull
-    @NotEmpty
+    @NotNull(message = "email cannot be null")
+    @NotEmpty(message = "email cannot be empty")
     private String email;
 
-    @NotNull
-    @Size(min = 8,max = 32,message = "password should be between 8 and 32 digits or characters")
+    @NotNull(message = "password cannot be null")
+    @Size(min=8,max=32,
+            message = "password size should be between" +
+                    " 8 and 32 digit or character")
     private String password;
 }

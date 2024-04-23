@@ -14,14 +14,14 @@ import lombok.Setter;
 @NoArgsConstructor
 public class CreateRestaurantDto {
 
-    @NotNull
-    @NotEmpty
+    @NotNull(message = "name cannot be null")
+    @NotEmpty(message = "name cannot be empty")
     private String name;
 
-    @NotNull
-    @NotEmpty
+    @NotNull(message = "address cannot be null")
+    @NotEmpty(message = "address cannot be empty")
     private String address;
-    @NotNull
-    @NotEmpty
+    @NotNull(message = "phone cannot be null")
+    @NotEmpty(message = "phone cannot be empty")
     private String phone;
 }
